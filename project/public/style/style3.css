@@ -1,0 +1,271 @@
+header {
+  padding: 0.75rem;
+}
+
+/* Navigation styles */
+.Head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #7fdbda, #8ee4af);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.logo-img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+}
+
+.nav-links a i {
+  margin-right: 5px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: linear-gradient(135deg, #7fdbda, #8ee4af);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.Head .logo {
+  flex-shrink: 0;
+}
+
+.Head ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Head ul li {
+  margin: 0 8px;
+}
+
+.Head ul li a {
+  font-family: "Coiny", system-ui;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  padding: 6px 12px;
+  border: 1.5px solid #e85b5b;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #05386b;
+  /* Darker blue for contrast */
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  background-color: rgba(255,
+      255,
+      255,
+      0.7);
+  /* Semi-transparent white background */
+}
+
+.contact-section {
+  background-color: #9aefd7;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-section h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #000000;
+  text-align: center;
+  position: relative;
+}
+
+.contact-section h1::after {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 3px;
+  background-color: #fabebe;
+  margin: 15px auto 0;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #000000;
+  margin-top: 30px;
+  /* chỉnh chữ lên xuống */
+  font-weight: bold;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #f2e2e2;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  color: #007bff;
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+}
+
+.contact-item i {
+  font-size: 24px;
+  color: #007bff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7f1ff;
+  border-radius: 50%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 12px;
+  border: 1.5px solid #ff6b6b;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: scale(1.05);
+  font-weight: 700;
+}

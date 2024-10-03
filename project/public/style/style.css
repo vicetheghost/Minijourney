@@ -1,0 +1,298 @@
+header {
+  
+  padding: 0.75rem;
+}
+
+.Head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #7fdbda, #8ee4af);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Head .logo {
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.Head ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Head ul li {
+  margin: 0 8px;
+}
+
+.Head ul li a {
+  font-family: "Coiny", system-ui;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  padding: 6px 12px;
+  border: 1.5px solid #e85b5b;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #05386b; /* Darker blue for contrast */
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+}
+
+.Head ul li a:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: scale(1.05); /* Slightly reduced scale effect */
+  font-weight: 700;
+}
+.chao{
+  text-align: center;
+}
+.giua{
+  display: flex;
+  
+}
+.giua huongdan{
+  flex-basis: 30%;
+
+}
+.giua gioi_thieu{
+  flex-basis: 70%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  color: #333;
+  font-size: 3em; /* Tăng từ 2.5em lên 3em */
+}
+
+.content {
+  display: flex;
+  position: relative;
+  gap: 40px;
+
+}
+
+.instructions {
+  background-color: rgb(222, 219, 219, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-basis: 30%;
+}
+
+.instructions ol {
+  padding-left: 10px;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #000000;
+  text-shadow: 
+    -2px -2px 0 #ffffff,
+    2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+    2px 2px 0 #ffffff;
+}
+
+.intro{
+ 
+  background-color: rgba(216, 211, 211, 0.5);
+  border-radius: 10px ;
+  padding: 0px 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-basis: 70%;
+}
+
+.intro h3 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.5rem; /* Thêm kích thước chữ */
+}
+
+.container h3
+{
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.5rem; /* Sửa từ 1000 rem xuống 1.5rem */
+  text-align: justify;
+  line-height: 1.75;
+}
+
+.intro img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.instructions ol {
+  padding-left: 10px;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Thêm kích thước chữ */
+  
+}
+.Head2 {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+.Head2 li {
+  list-style-type: none;
+}
+.Head2 li a {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 2px solid #4ecdc4;
+  border-radius: 10px;
+  color: #4ecdc4;
+  padding: 5px 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.Head2 li a:hover {
+  color: #ff6b6b;
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+}
+
+.nav-links a i {
+  margin-right: 5px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: linear-gradient(135deg, #7fdbda, #8ee4af);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.coiny-regular {
+  font-family: "Coiny", system-ui;
+  
+  font-style: normal;
+}
+

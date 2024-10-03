@@ -1,0 +1,334 @@
+header {
+ 
+  padding: 0.1rem;
+}
+
+.Head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #7fdbda, #8ee4af);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Head .logo {
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: auto;
+  height: 130px; /* Adjust this value to match the height of "Trang chủ" text */
+  transition: transform 0.3s ease;
+  vertical-align: middle; /* Aligns the image vertically with the text */
+  margin-top: -1px; /* Moves the logo slightly upwards */
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+.Head ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Head ul li {
+  margin: 0 8px;
+}
+
+
+
+.Head ul li a:hover {
+  background-color: #ffffff;
+  color: #379683; /* Darker green on hover */
+  transform: scale(1.05);
+  font-weight: 700;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; /* Base font size for body text */
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 400px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: rgb(130, 216, 234);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #88dcdf;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -50px; /* Adjust this value to fine-tune the button position */
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-box input[type="text"] {
+  width: 400px;
+  padding: 15px;
+  padding-right: 50px; /* Make room for the button */
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box button {
+  position: absolute;
+  right: 380px;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+background-color: #49490b;}
+
+.search-box button i {
+  color: #ffffff;
+  font-size: 20px;
+  
+}
+
+button:hover {
+  background-color: #f7da71;
+}
+
+#result {
+  margin-top: 20px;
+}
+img {
+  display: block;
+  margin-top: 20px;
+  max-width: auto;
+  height: auto;
+}
+
+/* Thêm vào cuối file styles.css */
+
+.stickers {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.stickers i {
+  color: #88dcdf;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.stickers i:hover {
+  transform: scale(1.2);
+  color: #1772ea;
+}
+
+.stickers.bottom {
+  margin-top: 30px;
+}
+
+/* Navigation item frames */
+.Head ul li {
+  margin: 0 8px;
+}
+
+.Head ul li a {
+  font-family: "Coiny", system-ui;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  padding: 6px 12px;
+  border: 1.5px solid #e85b5b;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #05386b; /* Darker blue for contrast */
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+}
+
+.Head ul li a:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: scale(1.05); /* Slightly reduced scale effect */
+  font-weight: 700;
+}
+
+.fun-icons {
+  display: flex;
+  justify-content: space-around; /* Changed from center to space-around */
+  align-items: center;
+  padding: 30px 0; /* Increased padding */
+
+  max-width: 1200px; /* Added max-width */
+  margin: 0 auto; /* Center the container */
+}
+
+.fun-icons i {
+  margin: 0 30px; /* Increased margin */
+  color: #4CAF50;
+  transition: all 0.3s ease;
+  font-size: 2.5rem; /* Adjusted size */
+}
+
+.fun-icons i:hover {
+  transform: scale(1.2) rotate(15deg);
+  color: #3498db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fun-icons {
+    flex-wrap: wrap;
+  }
+  
+  .fun-icons i {
+    margin: 15px;
+    font-size: 2rem;
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #ff6b6b;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+}
+
+.nav-links a i {
+  margin-right: 5px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: linear-gradient(135deg, #7fdbda, #8ee4af);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+

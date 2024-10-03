@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/style/style.css" />
+    <title>MapIUH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .slide-in {
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .slide-in.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+    <link rel="website icon" type="png"
+    href="../img/logominijourney.jpg">
+  </head>
+  <body>
+    <header>
+      <nav class="Head">
+        <div class="logo">
+          <img
+            src="../img/z5866570761933_5af628ddef51103ad23368ae4b5a36c7-removebg-preview.png"
+            alt="Logo"
+            class="logo-img"
+          />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../public/project.html" class="nav-button"
+              ><i class="fas fa-home"></i> Trang chủ</a
+            >
+          </li>
+          <li>
+            <a href="../public/index.html" class="nav-button"
+              ><i class="fas fa-map-marker-alt"></i> Chỉ đường</a
+            >
+          </li>
+          <li>
+            <a href="../public/lienhe.html" class="nav-button"
+              ><i class="fas fa-envelope"></i> Liên hệ</a
+            >
+          </li>
+        </ul>
+        <style>
+          .nav-button {
+            background-color: rgba(
+              255,
+              255,
+              255,
+              0.7
+            ); /* Increased white transparency */
+            border: 1px solid rgba(173, 216, 230, 0.4); /* Lighter blue border */
+            border-radius: 8px;
+            padding: 8px 15px;
+            color: #4169e1; /* Royal Blue text color */
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* White glow effect */
+          }
+          .nav-button:hover {
+            background-color: rgba(
+              255,
+              255,
+              255,
+              0.9
+            ); /* More white on hover */
+            border-color: rgba(
+              173,
+              216,
+              230,
+              0.6
+            ); /* Slightly more visible blue border on hover */
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Increased white glow on hover */
+          }
+        </style>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <hr />
+    <div class="container">
+      <div class="welcome slide-in">
+        <h1 style="letter-spacing: 3px">
+          CHÀO MỪNG ĐẾN VỚI TRANG WEB CỦA CHÚNG TÔI
+        </h1>
+        <style>
+          .welcome h1 {
+            font-family: "Bevan", serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 3em;
+            background: linear-gradient(
+              to right,
+              #ff6b6b,
+              #4ecdc4,
+              #d4ed65,
+              #ff6b6b
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: colorChange 3s linear infinite;
+            padding: 20px;
+            border-radius: 100px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(173, 216, 230, 0.3);
+            position: relative;
+            z-index: 1;
+           
+          }
+          
+          .welcome h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+              to right,
+              #ff6b6b,
+              #4ecdc4,
+              #d4ed65,
+              #ff6b6b
+            );
+            
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colorChange 3s linear infinite;
+            border-radius: 100px;
+            z-index: -1;
+            
+          }
+          
+          .welcome h1::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background-color: rgba(251, 202, 202, 0.3);
+            border-radius: 95px;
+            z-index: -1;
+            
+          }
+          @keyframes colorChange {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 200% 50%;
+            }
+          }
+        </style>
+        <style>
+          .welcome h1 {
+            font-family: "Paytone One", sans-serif;
+            font-size: 2.5em;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          }
+        </style>
+      </div>
+
+      <div class="content">
+        <div class="intro slide-in">
+          <style>
+            p{
+              text-indent: 40px;/*thụt đầu dòng 40px*/
+            }
+          </style>
+          <h3>
+            <p class = "space_text">Môi trường đại học rộng lớn, sơ đồ trường quá chằn chịt với nhiều tòa học, tân sinh viên dễ “lạc lối” giữa muôn vàn ngã rẽ, liệu đâu là con đường đúng và nhanh nhất hay chúng ta lại “BE LATE FOR TIME”. Vì thế, đó là lý do để <stan style="color: #00CCDD;"> MINI JOURNEY</stan> có mặt và giúp bạn tìm được “ngã rẽ” đúng cho cuộc đời mình!<br>
+            <span style = "color: #00CCDD;">MINI JOURNEY </span>- là công cụ hỗ trợ tìm kiếm và chỉ đường tiện lợi, nhanh chóng. Website của chúng tôi được thiết kế nhằm giúp bạn dễ dàng tìm kiếm và định vị các khu vực, tòa nhà, và phòng ban trong khuôn viên trường.<br>
+           <p>-Với giao diện trực quan và dễ sử dụng, website chỉ đường mang lại nhiều tính năng tiện ích cho sinh viên:<br></p></p>
+           <p>-Tìm kiếm địa điểm: Chỉ cần nhập tên tòa nhà hoặc phòng học, bạn sẽ nhận được hướng dẫn chi tiết về cách di chuyển từ vị trí hiện tại đến đích.<br>
+          <p> -Lộ trình tối ưu: Đưa ra các lộ trình nhanh nhất để di chuyển trong trường, giúp bạn tiết kiệm thời gian.<br></p>
+           <p>Website chỉ đường không chỉ giúp các bạn sinh viên năm nhất nhanh chóng làm quen với môi trường mới mà còn là công cụ hữu ích cho tất cả mọi người khi muốn tìm kiếm địa điểm trong khuôn viên trường.<br></p>
+           <p>Hãy truy cập và trải nghiệm ngay hôm nay để khám phá Đại học Công nghiệp TP.HCM một cách nhanh chóng và tiện lợi hơn! Chúng tôi cam kết cung cấp thông tin chính xác, cập nhật liên tục và giúp bạn tiết kiệm thời gian di chuyển trong mỗi ngày đến giảng đường .</p>
+          </h3>
+          <img
+            src="../img/z5843300191992_dee4a94383e69dccf74721db17b58e17-removebg-preview.png"
+            alt="Giới thiệu"
+          />
+        </div>
+
+        <div class="instructions slide-in">
+          <h3
+            style="
+              font-family: 'Francois One', sans-serif;
+              font-size: 1.5em;
+              color: #333;
+              text-decoration: underline;
+            "
+          >
+            HƯỚNG DẪN TÌM KIẾM:
+          </h3>
+          <ol
+            class="huongdan"
+            style="
+              font-family: 'Signika', sans-serif;
+              line-height: 1.6;
+              letter-spacing: 0.5px;
+              padding-left: 20px;
+            "
+          >
+            <li>Nhấp vào phần "Chỉ đường" ở góc trên bên phải.</li>
+            <li>
+              Sau khi nhấp vào phần "Chỉ đường", sẽ xuất hiện thanh tìm kiếm,
+              bạn chỉ cần nhập nơi cần đến trong khuôn viên trường.
+            </li>
+            <li>
+              Đọc kỹ thông tin đã được hướng dẫn, nếu thông tin bạn nhập vào
+              không được hiển thị, thì hãy nhấp vào phần "Liên hệ" ở góc trên
+              bên phải sẽ có thông tin để bạn được hỗ trợ.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    const navSlide = () => {
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links li");
+
+      burger.addEventListener("click", () => {
+        // Toggle Nav
+        nav.classList.toggle("nav-active");
+
+        // Animate Links
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`;
+          }
+        });
+
+        // Burger Animation
+        burger.classList.toggle("toggle");
+      });
+    };
+
+    navSlide();
+
+    // Add this new function
+    function checkSlide() {
+      const sliders = document.querySelectorAll('.slide-in');
+      sliders.forEach(slider => {
+        const slideInAt = (window.scrollY + window.innerHeight) - slider.offsetHeight / 2;
+        const elementBottom = slider.offsetTop + slider.offsetHeight;
+        const isHalfShown = slideInAt > slider.offsetTop;
+        const isNotScrolledPast = window.scrollY < elementBottom;
+        if (isHalfShown && isNotScrolledPast) {
+          slider.classList.add('active');
+        }
+      });
+    }
+
+    // Call checkSlide on scroll
+    window.addEventListener('scroll', checkSlide);
+
+    // Call checkSlide on load to show elements that are already in view
+    window.addEventListener('load', checkSlide);
+
+    navSlide();
+  </script>
+</html>
+
+
+

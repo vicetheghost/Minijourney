@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Search System</title>
+    <link rel="website icon" type = "png"
+    href="../img/logominijourney.jpg">
+    
+
+    <style>
+      .Head li a {
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+      }
+      .Head li a:hover {
+        color: #ff6b6b;
+        transform: scale(1.1);
+      }
+      .slide-down-container {
+        transform: translateY(-50px);
+        transition: transform 0.5s ease-out;
+      }
+      .slide-down-container.active {
+        transform: translateY(0);
+      }
+      /* thông số của cái khung lựa chọn */
+      .options-dropdown {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ddd;
+        max-height: 200px;
+        overflow-y: auto;
+        width: calc(100% - 40px); /* Adjust based on your layout */
+        z-index: 1000;
+      }
+      .option {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .option:hover {
+        background-color: #84bddc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-down-container">
+      <div class="container1">
+        <br>
+        <header>
+          <nav class="Head">
+            <div class="logo">
+              <img
+                src="../img/z5866570761933_5af628ddef51103ad23368ae4b5a36c7-removebg-preview.png"
+                alt="Logo"
+                class="logo-img"
+              />
+            </div>
+            <ul class="nav-links">
+              <li><a href="../public/project.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+              <li><a href="../public/index.html"><i class="fas fa-map-marker-alt"></i> Chỉ đường</a></li>
+              <li><a href="../public/lienhe.html"><i class="fa-solid fa-envelope"></i> Liên hệ</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
+        </header>
+        </br>
+          </div>
+            <div class="container">
+      <h1><i class="fas fa-search"></i> TÌM KIẾM NƠI BẠN CẦN ĐẾN </h1>
+
+      <div class="stickers">
+        <i class="fas fa-lightbulb fa-2x"></i>
+        <i class="fas fa-book fa-2x"></i>
+        <i class="fas fa-globe fa-2x"></i>
+      </div>
+
+      <!-- Form tìm kiếm -->
+      <form id="searchForm">
+        <div class="search-box">
+          <input
+            type="text"
+            id="query"
+            placeholder="Nơi bạn cần đến..."
+            required
+            autocomplete="off"
+          />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="options" class="options-dropdown" style="display: none;"></div>
+      </form>
+
+      <!-- Khu vực hiển thị kết quả -->
+      <div id="result"></div>
+
+    </div>
+
+    <!-- New section for fun GPS/map icons -->
+    <div class="fun-icons">
+      <i class="fas fa-map-marked-alt fa-3x"></i>
+      <i class="fas fa-compass fa-3x"></i>
+      <i class="fas fa-route fa-3x"></i>
+      <i class="fas fa-location-arrow fa-3x"></i>
+      <i class="fas fa-globe-americas fa-3x"></i>
+    </div>
+
+    <script>
+      // Khai báo biến toàn cục để lưu dữ liệu
+      let answersData = [];
+
+      // Hàm để tải dữ liệu từ file JSON
+      async function loadAnswersData() {
+        try {
+          const response = await fetch('answers.json');
+          answersData = await response.json();
+        } catch (error) {
+          console.error('Không thể tải dữ liệu:', error);
+        }
+      }
+
+      // Gọi hàm tải dữ liệu khi trang web được tải
+      loadAnswersData();
+
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const query = document.getElementById("query").value.trim().toLowerCase();
+
+          // Tìm kiếm câu trả lời phù hợp
+          const result = answersData.find(item => 
+            item.question.toLowerCase().includes(query) || 
+            (item.keywords && item.keywords.some(keyword => keyword.toLowerCase().includes(query)))
+          );
+
+          // Hiển thị kết quả tìm kiếm
+          const resultDiv = document.getElementById("result");
+          if (result) {
+            resultDiv.innerHTML = `
+              <h2>Kết quả:</h2>
+              <p>${result.answer}</p>
+              ${
+                result.image
+                  ? `<img src="${result.image}" alt="Hình ảnh" style="max-width: 100%; height: auto;">`
+                  : ""
+              }
+            `;
+          } else {
+            resultDiv.innerHTML = "<h2>Không tìm thấy kết quả</h2>";
+          }
+        });
+
+      /* Hiệu ứng chuyển trang*/
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          document.querySelector('.slide-down-container').classList.add('active');
+        }, 100);
+      });
+        /* JS lựa chọn options cho câu trả lời*/
+      const searchOptions = [
+        "Đường tới hội trường A7",
+        "Đường tới hội trường E4",
+        "Đường tới thư viện",
+        "Đường tới phòng khoa CNTT"
+      ];
+
+      const queryInput = document.getElementById('query');
+      const optionsDropdown = document.getElementById('options');
+
+      queryInput.addEventListener('click', () => {
+        optionsDropdown.innerHTML = searchOptions.map(option => 
+          `<div class="option">${option}</div>`
+        ).join('');
+        optionsDropdown.style.display = 'block';
+      });
+
+      optionsDropdown.addEventListener('click', (e) => {
+        if (e.target.classList.contains('option')) {
+          queryInput.value = e.target.textContent;
+          optionsDropdown.style.display = 'none';
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!queryInput.contains(e.target) && !optionsDropdown.contains(e.target)) {
+          optionsDropdown.style.display = 'none';
+        }
+      });
+    </script>
+  
+  </body>
+</html>
+
